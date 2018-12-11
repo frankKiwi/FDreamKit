@@ -1,3 +1,3 @@
 # FDreamKit
 FDreamKit
-pod 'FrankDreamKit', '~> 1.0.1'
+pod 'FrankDreamKit', '~> 1.0.4'
