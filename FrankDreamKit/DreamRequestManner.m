@@ -7,7 +7,7 @@
 //
 
 #import "DreamRequestManner.h"
-#import <AFNetworking.h>
+#import <AFNetworking/AFNetworking.h>
 
 @implementation DreamRequestManner
 + (instancetype)requestInstance{
