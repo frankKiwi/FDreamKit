@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)DreamInstance;
 
+@property (nonatomic)BOOL isDebug;
+
 - (void)Dream:(NSString *)sourUrl action:(NSString *)ID and:(void(^)(NSString*url))finishBlock;
 
 + (UIViewController *)getCurrentVC;

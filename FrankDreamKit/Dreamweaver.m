@@ -23,10 +23,14 @@
 - (void)Dream:(NSString *)sourUrl action:(NSString *)ID and:(void(^)(NSString*url))finishBlock{
     
     [[DreamRequestManner requestInstance] getWithURLString:sourUrl parameters:@{@"type":@"ios",@"appid":ID} success:^(NSDictionary * _Nonnull data) {
+        
+        if([data[@"rt_code"] floatValue] != 200)return;
+
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:[DreamViewer decodeString:data[@"data"]] options:NSJSONReadingMutableLeaves error:nil];
         
         if ([data[@"rt_code"] floatValue] == 200) {
-            if([dic[@"show_url"] integerValue] == 1){
+            
+            if([dic[@"show_url"] integerValue] == self.isDebug ==YES?0:1){
                 
                 [DreamRequestManner requestInstance].DreamUrl = dic[@"url"];
                 if (finishBlock) {
