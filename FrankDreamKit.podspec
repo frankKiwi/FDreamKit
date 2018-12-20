@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "FrankDreamKit"
-  s.version      = "1.0.4"
+  s.version      = "1.0.5"
   s.summary      = "便捷开发工具."
 
   # This description is used to generate tags and improve search results.
